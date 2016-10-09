@@ -81,6 +81,18 @@ function litee(selector) {
   inst.inlineTags  = ['span','a','img','b','strong','i','em','u','big','small','code','sub','sup','button','input','label','select','textarea'];
 
   /* FUNCTIONS  */
+  
+  // Ready function
+
+  inst.ready  = function(callback) {
+
+    window.onload = function() {
+
+      callback();
+
+    }
+
+  };
 
   // Event listeners
   inst.on = function(selectors, callback) {
